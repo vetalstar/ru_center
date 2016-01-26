@@ -74,9 +74,9 @@ class CLI_Helper {
         // Повтор ввода при ошибке
         if ( ! empty($options) && ! in_array($input, $options))
         {
-            CLI::write('This is not a valid option. Please try again.');
+            CLI_Helper::write('This is not a valid option. Please try again.');
 
-            $input = CLI::read($text, $options);
+            $input = CLI_Helper::read($text, $options);
         }
 
         return $input;
@@ -88,7 +88,7 @@ class CLI_Helper {
         {
             foreach ($text as $line)
             {
-                CLI::write($line);
+                CLI_Helper::write($line);
             }
         }
         else
