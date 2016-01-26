@@ -8,6 +8,8 @@ abstract class CLI_Task {
 		{
 			$task = $options[0];
 		}
+		else
+			$task = '';
 
 		$task = trim($task);
 		$class = 'Task_' . ucfirst(strtolower($task));
